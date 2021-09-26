@@ -1,0 +1,222 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+::selection {
+    background-color: orange;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    color: #fff;
+    cursor: default;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0px 20px;
+    position: relative;
+    transition: all 0.3s ease-out;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1087%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%231e3266'%3e%3c/rect%3e%3cpath d='M1512 560L0 560 L0 400.11Q47.43 375.54%2c 72 422.97Q117.02 396%2c 144 441.02Q188.22 365.24%2c 264 409.45Q291 364.44%2c 336 391.44Q420.05 355.49%2c 456 439.53Q508.78 372.31%2c 576 425.09Q601.74 378.83%2c 648 404.57Q726.57 363.13%2c 768 441.7Q801.04 354.74%2c 888 387.78Q959.71 339.49%2c 1008 411.19Q1082.63 365.82%2c 1128 440.46Q1164.79 357.25%2c 1248 394.03Q1299.38 373.4%2c 1320 424.78Q1362.59 395.37%2c 1392 437.95Q1427.12 353.06%2c 1512 388.18z' fill='%23182f5d'%3e%3c/path%3e%3cpath d='M1512 560L0 560 L0 486.42Q37.75 404.17%2c 120 441.91Q195.44 397.35%2c 240 472.78Q270.04 430.81%2c 312 460.85Q360.19 437.04%2c 384 485.23Q421.45 402.69%2c 504 440.14Q547.35 411.49%2c 576 454.84Q641.53 400.37%2c 696 465.89Q716.6 414.49%2c 768 435.09Q808.51 403.6%2c 840 444.1Q895.01 427.11%2c 912 482.12Q938.44 436.56%2c 984 463.01Q1010.79 417.8%2c 1056 444.59Q1111.42 428.01%2c 1128 483.43Q1155.68 439.12%2c 1200 466.8Q1246.68 393.49%2c 1320 440.17Q1363.44 411.62%2c 1392 455.06Q1458.07 401.13%2c 1512 467.2z' fill='%2325467d'%3e%3c/path%3e%3cpath d='M1464 560L0 560 L0 503.45Q44.51 475.96%2c 72 520.47Q114.27 490.74%2c 144 533.01Q164.31 481.32%2c 216 501.62Q243.23 456.85%2c 288 484.07Q366.35 442.42%2c 408 520.78Q431.5 472.27%2c 480 495.77Q533.71 477.48%2c 552 531.19Q599.95 459.14%2c 672 507.09Q722.31 437.39%2c 792 487.7Q874.31 450%2c 912 532.31Q961.08 461.38%2c 1032 510.46Q1073.93 432.39%2c 1152 474.33Q1200.11 450.44%2c 1224 498.55Q1301.26 455.81%2c 1344 533.07Q1379.55 448.63%2c 1464 484.18z' fill='%23356cb1'%3e%3c/path%3e%3cpath d='M1488 560L0 560 L0 521.42Q85.79 487.21%2c 120 573.01Q145.2 526.21%2c 192 551.41Q233.57 520.98%2c 264 562.55Q331.33 509.88%2c 384 577.2Q426.73 499.93%2c 504 542.66Q571.45 490.11%2c 624 557.56Q666.48 480.04%2c 744 522.52Q810.93 469.45%2c 864 536.38Q942.04 494.42%2c 984 572.46Q1031.22 499.68%2c 1104 546.9Q1130.18 501.08%2c 1176 527.26Q1255.35 486.61%2c 1296 565.96Q1337.17 535.13%2c 1368 576.3Q1409.92 498.22%2c 1488 540.14z' fill='white'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1087'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-size: 100% 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.refresh-game {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transform: translateY(0%) scale(0);
+    transition: all 0.3s ease-out;
+}
+
+.refresh-game-active {
+    transform: translateY(0%) scale(1);
+    transition: all 0.3s ease-out;
+}
+
+.refresh-game:hover {
+    transform: translateY(-20%);
+    transition: all 0.3s ease-out;
+}
+
+.game-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.3);
+    transition: all 0.3s ease-out;
+}
+
+.game {
+    max-width: 450px;
+    height: 62.5vh;
+    max-height: 450px;
+    width: 100%;
+    border: 6px solid black;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.3);
+    transition: all 0.3s ease-out;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(100px, 33.333%));
+}
+
+.elems-active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: all 0.3s ease-out;
+}
+
+.start-game {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 26px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 0px rgba(256, 256, 256, 0.7), 0px 0px 0px rgba(256, 256, 256, 0.5), 0px 0px 0px rgba(256, 256, 256, 0.4);
+    transition: all 0.3s ease-out;
+}
+
+.start-game:hover {
+    box-shadow: 0px 0px 12px rgba(256, 256, 256, 0.7), 0px 0px 24px rgba(256, 256, 256, 0.5), 0px 0px 36px rgba(256, 256, 256, 0.4);
+    transition: all 0.3s ease-out;
+}
+
+.game-item {
+    cursor: pointer;
+    border: 6px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insert-image {
+    user-select: none;
+    width: 50%;
+    height: 50%;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.animate-image {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+/* модальное окно победителя */
+.modal-action {
+    cursor: default;
+    color: #000;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+    max-width: 500px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.3s ease-out;
+}
+
+.modal-content {
+    font-size: 32px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.winner {
+    font-size: 46px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.submit-winner {
+    margin-top: 100px;
+    padding: 10px 26px;
+    border: 4px solid #000;
+    color: #000;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 32px;
+    background-color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.3s ease-out;
+}
+
+.submit-winner:hover {
+    color: #fff;
+    background-color: #000;
+    transform: scale(1.2);
+    transition: all 0.3s ease-out;
+}
+
+.background-modal {
+    position: absolute;
+    text-transform: uppercase;
+    bottom: -50px;
+    right: 20px;
+    font-size: 280px;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.3);
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
