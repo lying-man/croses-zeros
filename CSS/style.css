@@ -121,6 +121,19 @@ body {
     align-items: center;
 }
 
+@media (max-height: 471px) {
+    .game-title {
+        font-size: 14px;
+        align-self: flex-start;
+    }
+
+    .refresh-game {
+        font-size: 14px;
+        padding: 6px 14px;
+        top: 16px;
+    }
+}
+
 .insert-image {
     user-select: none;
     width: 50%;
