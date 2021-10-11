@@ -122,6 +122,10 @@ body {
 }
 
 @media (max-height: 471px) {
+     .game {
+        min-height: 300px;
+    }
+    
     .game-title {
         font-size: 14px;
         align-self: flex-start;
